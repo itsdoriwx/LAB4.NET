@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="U7SWecLvXFvM1CobuI6k">
+    <mxGraphModel dx="2012" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-21" edge="1" parent="1" source="4pe3viYKmRhsTFvMsf6j-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;endArrow=block;endFill=0;endSize=13;fontSize=14;" target="4pe3viYKmRhsTFvMsf6j-5">
+          <mxGeometry relative="1" x="0.0039" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;strokeWidth=2;" value="FictionBook" vertex="1">
+          <mxGeometry height="106" width="200" x="-40" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-2" parent="4pe3viYKmRhsTFvMsf6j-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;strokeWidth=2;" value="&lt;div&gt;+ Genre : string&lt;/div&gt;&lt;div&gt;+ EditionsCount : int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="42" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-3" parent="4pe3viYKmRhsTFvMsf6j-1" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-4" parent="4pe3viYKmRhsTFvMsf6j-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;strokeWidth=2;" value="+ GetEditionsCount() : int" vertex="1">
+          <mxGeometry height="26" width="200" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-5" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=14;strokeWidth=2;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;br&gt;Book&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Title : string&lt;br&gt;+ Author : string&lt;br&gt;+ PageCount : int&lt;br&gt;+ Language : string&lt;/p&gt;&lt;hr style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &lt;i&gt;Read() : string&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ AddToLibrary() : string&lt;/p&gt;" vertex="1">
+          <mxGeometry height="180" width="190" x="95" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-6" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;strokeWidth=2;" value="ScientificBook" vertex="1">
+          <mxGeometry height="106" width="230" x="240" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-7" parent="4pe3viYKmRhsTFvMsf6j-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;strokeWidth=2;" value="&lt;div&gt;+ Topic : string&lt;/div&gt;&lt;div&gt;+ CitationsCount : int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="42" width="230" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-8" parent="4pe3viYKmRhsTFvMsf6j-6" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="8" width="230" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-9" parent="4pe3viYKmRhsTFvMsf6j-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;strokeWidth=2;" value="+ CalculateCitationIndex() : double" vertex="1">
+          <mxGeometry height="26" width="230" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-17" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=43;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;strokeWidth=2;" value="&lt;div&gt;&amp;lt;&amp;lt;static&amp;gt;&amp;gt;&lt;/div&gt;LibraryAnalysis" vertex="1">
+          <mxGeometry height="117" width="466" x="414" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-18" parent="4pe3viYKmRhsTFvMsf6j-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;strokeWidth=2;" value="&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="26" width="466" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-19" parent="4pe3viYKmRhsTFvMsf6j-17" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="8" width="466" y="69" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-20" parent="4pe3viYKmRhsTFvMsf6j-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;strokeWidth=2;" value="&lt;u&gt;+ GetTotalPagesByLanguage(books : List&amp;lt;Book&amp;gt;, language : string) : int&lt;/u&gt;" vertex="1">
+          <mxGeometry height="40" width="466" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-22" edge="1" parent="1" source="4pe3viYKmRhsTFvMsf6j-6" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.717;entryY=1.007;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;endArrow=block;endFill=0;endSize=13;fontSize=14;" target="4pe3viYKmRhsTFvMsf6j-5">
+          <mxGeometry relative="1" x="-0.0048" as="geometry" />
+        </mxCell>
+        <mxCell id="4pe3viYKmRhsTFvMsf6j-24" edge="1" parent="1" source="4pe3viYKmRhsTFvMsf6j-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fontSize=14;endArrow=none;endFill=0;startArrow=diamond;startFill=1;startSize=17;" target="4pe3viYKmRhsTFvMsf6j-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

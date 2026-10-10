@@ -1,0 +1,180 @@
+﻿<Window x:Class="LAB3.NET.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAB3.NET"
+        mc:Ignorable="d"
+        
+        Title="Система обліку книг бібліотеки" 
+        Height="650" Width="980" 
+        WindowStartupLocation="CenterScreen"
+        Background="#D7C9B8">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Облік бібліотечного фонду" 
+                   FontSize="22" FontWeight="Bold" Foreground="Black" 
+                   Margin="0,0,0,15"/>
+
+        <Grid Grid.Row="1" Margin="0,0,0,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="380"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Background="#F5F1EA" CornerRadius="12" Padding="15" BorderBrush="#B2967D" BorderThickness="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Додавання нової книги" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,12" Foreground="Black"/>
+
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10">
+                        <StackPanel Margin="0,0,5,0">
+                            <TextBlock Text="Тип видання:" Margin="0,0,0,5" FontWeight="Medium" Foreground="Black"/>
+                            <ComboBox x:Name="BookTypeComboBox" SelectionChanged="BookTypeComboBox_SelectionChanged" Margin="0,0,0,10" Height="28">
+                                <ComboBoxItem Content="Художня література" IsSelected="True"/>
+                                <ComboBoxItem Content="Наукова література"/>
+                                <ComboBoxItem Content="Довідкова література"/>
+                            </ComboBox>
+
+                            <TextBlock Text="Назва книги:" Margin="0,0,0,4" FontWeight="Medium" Foreground="Black"/>
+                            <TextBox x:Name="TitleTextBox" Height="26" Margin="0,0,0,10" Padding="4,2"/>
+
+                            <TextBlock Text="Автор:" Margin="0,0,0,4" FontWeight="Medium" Foreground="Black"/>
+                            <TextBox x:Name="AuthorTextBox" Height="26" Margin="0,0,0,10" Padding="4,2"/>
+
+                            <TextBlock Text="Кількість сторінок:" Margin="0,0,0,4" FontWeight="Medium" Foreground="Black"/>
+                            <TextBox x:Name="PagesTextBox" Height="26" Margin="0,0,0,10" Padding="4,2"/>
+
+                            <TextBlock Text="Мова видання:" Margin="0,0,0,4" FontWeight="Medium" Foreground="Black"/>
+                            <TextBox x:Name="LanguageTextBox" Height="26" Margin="0,0,0,10" Padding="4,2"/>
+
+                            <StackPanel x:Name="FictionFieldsPanel" Visibility="Visible">
+                                <TextBlock Text="Жанр твору:" Margin="0,0,0,4" FontWeight="Medium" Foreground="Black"/>
+                                <TextBox x:Name="GenreTextBox" Height="26" Margin="0,0,0,10" Padding="4,2"/>
+
+                                <TextBlock Text="Кількість перевидань:" Margin="0,0,0,4" FontWeight="Medium" Foreground="Black"/>
+                                <TextBox x:Name="EditionCountTextBox" Height="26" Margin="0,0,0,10" Padding="4,2"/>
+                            </StackPanel>
+
+                            <StackPanel x:Name="ScientificFieldsPanel" Visibility="Collapsed">
+                                <TextBlock Text="Наукова галузь:" Margin="0,0,0,4" FontWeight="Medium" Foreground="Black"/>
+                                <TextBox x:Name="FieldOfStudyTextBox" Height="26" Margin="0,0,0,10" Padding="4,2"/>
+
+                                <TextBlock Text="Кількість цитувань:" Margin="0,0,0,4" FontWeight="Medium" Foreground="Black"/>
+                                <TextBox x:Name="CitationsTextBox" Height="26" Margin="0,0,0,10" Padding="4,2"/>
+                            </StackPanel>
+
+                            <StackPanel x:Name="ReferenceFieldsPanel" Visibility="Collapsed">
+                                <TextBlock Text="Тип довідника:" Margin="0,0,0,4" FontWeight="Medium" Foreground="Black"/>
+                                <ComboBox x:Name="ReferenceTypeComboBox" Height="28" Margin="0,0,0,10">
+                                    <ComboBoxItem Content="Енциклопедія" IsSelected="True"/>
+                                    <ComboBoxItem Content="Словник"/>
+                                    <ComboBoxItem Content="Довідник"/>
+                                    <ComboBoxItem Content="Атлас"/>
+                                </ComboBox>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <Button Grid.Row="2" x:Name="AddBookButton" Content="Додати книгу до каталогу" 
+                            Height="34" Background="#4A342A" Foreground="White" 
+                            FontWeight="SemiBold" Click="AddBookButton_Click"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="2" Background="#F5F1EA" CornerRadius="12" Padding="15" BorderBrush="#B2967D" BorderThickness="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Каталог зареєстрованих книг" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,8" Foreground="Black"/>
+                    <ListBox Grid.Row="1" x:Name="BooksListBox" Margin="0,0,0,8" BorderBrush="#B2967D" Background="White" />
+
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Text="Всього: " FontWeight="Medium" Foreground="Black"/>
+                        <TextBlock x:Name="TotalBooksCountText" Text="0" FontWeight="Bold" Margin="0,0,15,0" Foreground="Black"/>
+
+                        <TextBlock Text="Художніх: " FontWeight="Medium" Foreground="Black"/>
+                        <TextBlock x:Name="FictionCountText" Text="0" FontWeight="Bold" Margin="0,0,15,0" Foreground="Black"/>
+
+                        <TextBlock Text="Наукових: " FontWeight="Medium" Foreground="Black"/>
+                        <TextBlock x:Name="ScientificCountText" Text="0" FontWeight="Bold" Margin="0,0,15,0" Foreground="Black"/>
+
+                        <TextBlock Text="Довідкових: " FontWeight="Medium" Foreground="Black"/>
+                        <TextBlock x:Name="ReferenceCountText" Text="0" FontWeight="Bold" Foreground="Black"/>
+                    </StackPanel>
+
+                    <Grid Grid.Row="3" Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" x:Name="ReadBookButton" Content="Читати обрану книгу" 
+                                Height="30" Background="#7D5A44" Foreground="White" 
+                                FontWeight="Medium" Click="ReadBookButton_Click"/>
+                        <Button Grid.Column="2" x:Name="DeleteBookButton" Content="Видалити обрану книгу" 
+                                Height="30" Background="#4A342A" Foreground="White" 
+                                FontWeight="Medium" Click="DeleteBookButton_Click"/>
+                    </Grid>
+
+                    <TextBlock Grid.Row="4" Text="Журнал дій та подій" FontSize="14" FontWeight="SemiBold" Margin="0,0,0,6" Foreground="Black"/>
+                    <TextBox Grid.Row="5" x:Name="LogTextBox" IsReadOnly="True" VerticalScrollBarVisibility="Auto" 
+                             TextWrapping="Wrap" Background="White" BorderBrush="#B2967D" FontFamily="Consolas" FontSize="12" Foreground="Black"/>
+
+                    <Button Grid.Row="6" x:Name="ClearLogButton" Content="Очистити журнал" 
+                            HorizontalAlignment="Right" Margin="0,8,0,0" Padding="12,4" 
+                            Background="#B2967D" Foreground="White" BorderThickness="0" 
+                            Click="ClearLogButton_Click" Height="24" VerticalAlignment="Top"/>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Border Grid.Row="2" Background="#F5F1EA" CornerRadius="12" Padding="15,12" BorderBrush="#B2967D" BorderThickness="1">
+            <Grid VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="Аналітика фонду:" FontWeight="Bold" Foreground="Black" Margin="0,0,16,0" VerticalAlignment="Center"/>
+                    <TextBlock Text="Мова:" FontWeight="Medium" Foreground="Black" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                    <TextBox x:Name="FilterLanguageTextBox" Width="100" Height="26" Margin="0,0,16,0" Padding="4,2" VerticalAlignment="Center"/>
+                    <Button x:Name="CalculatePagesButton" Content="Порахувати сторінки" 
+                            Height="28" Padding="12,2" Margin="0,0,16,0" Background="#7D5A44" Foreground="White" 
+                            FontWeight="Medium" VerticalAlignment="Center" Click="CalculatePagesButton_Click"/>
+                    <TextBlock Text="Сторінок: " FontWeight="Medium" Foreground="Black" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="TotalPagesResultText" Text="--" FontWeight="Bold" Foreground="Black" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="Індекс цитування: " FontWeight="Medium" Foreground="Black" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="CitationIndexResultText" Text="--" FontWeight="Bold" Margin="0,0,16,0" Foreground="Black" VerticalAlignment="Center"/>
+                    <Button x:Name="CalculateCitationIndexButton" Content="Розрахувати" 
+                            Height="28" Padding="14,2" Background="#4A342A" Foreground="White" 
+                            FontWeight="Medium" VerticalAlignment="Center" Click="CalculateCitationIndexButton_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
